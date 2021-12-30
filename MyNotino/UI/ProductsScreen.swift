@@ -35,8 +35,8 @@ final class ProductsScreen: UIViewController {
             supplementaryViewType: ProductsScreenFooter.self,
             ofKind: UICollectionView.elementKindSectionFooter
         )
-        #endif
         collectionView.delegate = presenter
+        #endif
         collectionView.dataSource = presenter
         return collectionView
     }()

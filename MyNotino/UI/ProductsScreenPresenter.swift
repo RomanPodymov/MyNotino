@@ -108,6 +108,7 @@ final class ProductsScreenPresenter: NSObject {
     #endif
 }
 
+#if SIMULATE_PAGINATION
 extension ProductsScreenPresenter: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -117,7 +118,6 @@ extension ProductsScreenPresenter: UICollectionViewDelegateFlowLayout {
         .init(width: collectionView.frame.width, height: Constants.productsScreenFooterHeight)
     }
 
-    #if SIMULATE_PAGINATION
     func collectionView(
         _ collectionView: UICollectionView,
         viewForSupplementaryElementOfKind kind: String,
@@ -155,8 +155,8 @@ extension ProductsScreenPresenter: UICollectionViewDelegateFlowLayout {
             (view as? ProductsScreenFooter)?.onLoadingFinished()
         }
     }
-    #endif
 }
+#endif
 
 extension ProductsScreenPresenter: UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {

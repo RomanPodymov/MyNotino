@@ -1,0 +1,25 @@
+name: MyNotinoJobs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: MyNotinoTests
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        condition: ["$(inherited) SIMULATE_PAGINATION", "$(inherited)"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Install Mint
+        run: brew install mint
+      - name: Generate Xcode project
+        env:
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: ${{ matrix.condition }}
+        run: mint bootstrap && mint run xcodegen
+      - name: Build and test
+        run: xcodebuild test -project MyNotino.xcodeproj -scheme MyNotinoApp -destination "platform=iOS Simulator,OS=15.0,name=iPhone 8"

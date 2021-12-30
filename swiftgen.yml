@@ -1,0 +1,12 @@
+strings:
+  inputs:
+    - MyNotino/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: MyNotino/Generated/Strings.swift
+xcassets:
+  inputs:
+    - MyNotino/Media.xcassets
+  outputs:
+    - templateName: swift5
+      output: MyNotino/Generated/Assets.swift

@@ -1,0 +1,76 @@
+name: MyNotino
+options:
+  bundleIdPrefix: com.mynotino
+  deploymentTarget:
+    iOS: 12.0
+  xcodeVersion: "13.2.1"
+packages:
+  DifferenceKit:
+    url: https://github.com/ra1028/DifferenceKit.git
+    version: 1.2.0
+  Fashion:
+    url: https://github.com/vadymmarkov/Fashion
+    version: 4.2.0
+  Kingfisher:
+    url: https://github.com/onevcat/Kingfisher
+    version: 7.1.1
+  Moya:
+    url: https://github.com/Moya/Moya
+    version: 15.0.0
+  Nimble:
+    url: https://github.com/Quick/Nimble
+    version: 9.2.1
+  PromiseKit:
+    url: https://github.com/mxcl/PromiseKit
+    version: 6.16.2
+  PureLayout:
+    url: https://github.com/PureLayout/PureLayout
+    version: 3.1.9
+  Quick:
+    url: https://github.com/Quick/Quick
+    version: 4.0.0
+  Reusable:
+    url: https://github.com/AliSoftware/Reusable.git
+    version: 4.1.2
+  SwifterSwift:
+    url: https://github.com/SwifterSwift/SwifterSwift
+    version: 5.2.0
+  Swinject:
+    url: https://github.com/Swinject/Swinject.git
+    version: 2.8.1
+targets:
+  MyNotinoApp:
+    settings:
+      base:
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: ${SWIFT_ACTIVE_COMPILATION_CONDITIONS}
+    type: application
+    platform: iOS
+    sources: [MyNotino]
+    dependencies:
+      - package: DifferenceKit
+      - package: Fashion
+      - package: Kingfisher
+      - package: Moya
+      - package: PromiseKit
+      - package: PureLayout
+      - package: Reusable
+      - package: SwifterSwift
+      - package: Swinject
+    info:
+      path: MyNotino/Info.plist
+    preBuildScripts:
+      - script: "mint run swiftgen"
+        name: SwiftGen
+    postCompileScripts:
+      - script: "mint run swiftformat . --swiftversion 5.5"
+        name: SwiftFormat
+      - script: "mint run swiftlint"
+        name: SwiftLint
+  MyNotinoAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [MyNotinoTests]
+    dependencies:
+      - target: MyNotinoApp
+      - package: Nimble
+      - package: Quick

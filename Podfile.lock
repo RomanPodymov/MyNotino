@@ -1,0 +1,22 @@
+PODS:
+  - NotinoAssets (1.0.0)
+
+DEPENDENCIES:
+  - NotinoAssets (from `https://github.com/RomanPodymov/notino-assignment.git`, branch `cocoapods`)
+
+EXTERNAL SOURCES:
+  NotinoAssets:
+    :branch: cocoapods
+    :git: https://github.com/RomanPodymov/notino-assignment.git
+
+CHECKOUT OPTIONS:
+  NotinoAssets:
+    :commit: 478b4a7e78d797cb991aaaf8ef1e8a9ca44738dc
+    :git: https://github.com/RomanPodymov/notino-assignment.git
+
+SPEC CHECKSUMS:
+  NotinoAssets: 484ac4845cc9ce6ece74bc2f8951a3d902ce7f89
+
+PODFILE CHECKSUM: 107c62617adb1fa89b0397f1ddd9bd3baf768918
+
+COCOAPODS: 1.11.3

@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NotinoAssets:
-    :commit: 478b4a7e78d797cb991aaaf8ef1e8a9ca44738dc
+    :commit: b72d8d5bff269ab37611b41cc8ac1b68c55ff5b1
     :git: https://github.com/RomanPodymov/notino-assignment.git
 
 SPEC CHECKSUMS:

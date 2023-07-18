@@ -13,7 +13,7 @@ packages:
     version: 4.2.0
   Kingfisher:
     url: https://github.com/onevcat/Kingfisher
-    version: 7.1.1
+    version: 7.8.1
   Moya:
     url: https://github.com/Moya/Moya
     version: 15.0.0
@@ -74,3 +74,5 @@ targets:
       - target: MyNotinoApp
       - package: Nimble
       - package: Quick
+    info:
+      path: MyNotinoAppTests/Info.plist

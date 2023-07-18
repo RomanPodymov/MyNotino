@@ -75,4 +75,4 @@ targets:
       - package: Nimble
       - package: Quick
     info:
-      path: MyNotinoAppTests/Info.plist
+      path: MyNotinoTests/Info.plist

@@ -2,4 +2,4 @@ MyNotino/Info.plist
 MyNotino.xcodeproj
 MyNotino.xcworkspace
 Pods/
-MyNotinoAppTests/Info.plist
+MyNotinoTests/Info.plist

@@ -64,8 +64,8 @@ final class MainStylesheet: Stylesheet {
 
         register(MyNotinoStyle.productsCellButtonBase) { (button: UIButton) in
             button.setTitleColorForAllStates(.black)
-            button.borderColor = .black
-            button.borderWidth = 2
+            (button as UIView).layerBorderColor = .black
+            (button as UIView).layerBorderWidth = 2
         }
     }
 }

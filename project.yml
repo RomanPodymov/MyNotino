@@ -3,26 +3,26 @@ options:
   bundleIdPrefix: com.mynotino
   deploymentTarget:
     iOS: 12.0
-  xcodeVersion: "13.2.1"
+  xcodeVersion: "15.0.1"
 packages:
   DifferenceKit:
     url: https://github.com/ra1028/DifferenceKit.git
-    version: 1.2.0
+    version: 1.3.0
   Fashion:
     url: https://github.com/vadymmarkov/Fashion
     version: 4.2.0
   Kingfisher:
     url: https://github.com/onevcat/Kingfisher
-    version: 7.8.1
+    version: 7.10.0
   Moya:
     url: https://github.com/Moya/Moya
-    version: 15.0.0
+    version: 15.0.3
   Nimble:
     url: https://github.com/Quick/Nimble
     version: 9.2.1
   PromiseKit:
     url: https://github.com/mxcl/PromiseKit
-    version: 6.16.2
+    version: 8.1.1
   PureLayout:
     url: https://github.com/PureLayout/PureLayout
     version: 3.1.9
@@ -34,7 +34,7 @@ packages:
     version: 4.1.2
   SwifterSwift:
     url: https://github.com/SwifterSwift/SwifterSwift
-    version: 5.2.0
+    version: 6.0.0
   Swinject:
     url: https://github.com/Swinject/Swinject.git
     version: 2.8.1
